@@ -1,0 +1,208 @@
+QWidget {
+  background-color: aliceblue; 
+}
+
+QDialog {
+      background-color: aliceblue; 
+}
+
+QTabWidget
+{
+    font-family: "Microsoft YaHei";
+    font: 12pt
+}
+ 
+/* Nice Windows-XP-style password character. */
+QLineEdit[echoMode="2"] {
+    lineedit-password-character: 9679;
+}
+
+ QGroupBox {
+    font-family: "Microsoft YaHei";
+    border-color: rgb(156, 156, 156);
+    border-width: 2px;
+    border-style: solid;
+    margin-top: 2ex;
+    font: 12pt;
+}
+
+QGroupBox:title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 10px;
+    margin-left: 5px;
+    padding: 0 5px;
+}
+
+/* We provide a min-width and min-height for push buttons
+   so that they look elegant regardless of the width of the text. */
+QPushButton {
+    font-family: "Microsoft YaHei";
+    background-color: palegoldenrod;
+    border-width: 2px;
+    border-color: darkkhaki;
+    border-style: solid;
+    border-radius: 5;
+    padding: 3px;
+    min-width: 9ex;
+    min-height: 2.5ex;
+    font: 12pt
+}
+
+QPushButton:hover {
+   background-color: rgba(30,144,255,0.7);
+}
+
+/* Increase the padding, so the text is shifted when the button is
+   pressed. */
+QPushButton:pressed {
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: #d0d67c;
+}
+
+QLabel, QAbstractButton {
+    font-family: "Microsoft YaHei";
+    font: bold;
+    font: 12pt
+}
+
+/* Mark mandatory fields with a brownish color. */
+.mandatory {
+    color: brown;
+}
+
+/* Bold text on status bar looks awful. */
+QStatusBar QLabel {
+    font-family: "Microsoft YaHei";
+   font: normal;
+}
+
+QStatusBar::item {
+    border-width: 1;
+    border-color: darkkhaki;
+    border-style: solid;
+    border-radius: 2;
+}
+
+QComboBox, QLineEdit, QSpinBox, QTextEdit, QListView {
+    font-family: "Microsoft YaHei";
+    background-color: cornsilk;
+    selection-color: #0a214c; 
+    selection-background-color: #C19A6B;
+}
+
+QListView {
+    show-decoration-selected: 1;
+}
+
+QListView::item:hover {
+    background-color: wheat;
+}
+
+/* We reserve 1 pixel space in padding. When we get the focus,
+   we kill the padding and enlarge the border. This makes the items
+   glow. */
+QLineEdit, QFrame {
+    font-family: "Microsoft YaHei";
+    border-width: 1px;
+    padding: 1px;
+    border-style: solid;
+    border-color: darkkhaki;
+    border-radius: 5px;
+}
+
+/* As mentioned above, eliminate the padding and increase the border. */
+QLineEdit:focus, QFrame:focus {
+    border-width: 3px;
+    padding: 0px;
+}
+
+/* A QLabel is a QFrame ... */
+QLabel {
+    font-family: "Microsoft YaHei";
+    border: none;
+    padding: 0;
+    background: none;
+}
+
+/* A QToolTip is a QLabel ... */
+QToolTip {
+    border: 1px solid darkkhaki;
+    padding: 5px;
+    border-radius: 3px;
+    opacity: 200;
+}
+
+/* Nice to have the background color change when hovered. */
+QRadioButton:hover, QCheckBox:hover {
+    background-color: wheat;
+}
+
+/* Force the dialog's buttons to follow the Windows guidelines. */
+QDialogButtonBox {
+    button-layout: 0;
+}
+
+QComboBox, QLineEdit, QDoubleSpinBox, QSpinBox, QTextEdit, QListView {
+    font-family: "Microsoft YaHei";
+    border-radius: 5px;
+    border: 1px solid ;
+    border-color: darkkhaki;
+    background-color: azure;
+    selection-color: #0a214c; 
+    selection-background-color: #C19A6B;
+    font: 12pt;
+}
+
+QLineEdit, QFrame {
+    font-family: "Microsoft YaHei";
+    border-width: 2px;
+    padding: 1px;
+    border-style: solid;
+    border-color: darkkhaki;
+    border-radius: 5px;
+    font: 12pt;
+}
+
+QLineEdit:focus, QFrame:focus {
+    font-family: "Microsoft YaHei";
+    border-width: 3px;
+    padding: 0px;
+    font: 12pt;
+}
+
+/* A QLabel is a QFrame ... */
+QLabel {
+    border: none;
+    padding: 0;
+    background: none;
+    font:  12pt;
+
+}
+
+/**********Title**********/
+QTitleLabel{
+        background-color: Gainsboro;
+        font: 100 10pt;
+}
+
+/**********Button**********/
+QTitleButton{
+        font-family: "Microsoft YaHei";
+        background-color: rgba(255, 255, 255, 0);
+        color: black;
+        border: 0px;
+        font: 100 10pt;
+}
+QTitleButton#MinMaxButton:hover{
+        background-color: #D0D0D1;
+        border: 0px;
+        font: 100 10pt;
+}
+QTitleButton#CloseButton:hover{
+        background-color: #D32424;
+        color: white;
+        border: 0px;
+        font: 100 10pt;
+}
